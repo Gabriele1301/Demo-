@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'/>
+	<title>
+		Fotografo - DEBUG PAGE - JOBSMATCHER
+	</title>
+	<script src='js/RestUtil.js'>
+	</script>
+	<script>
+		function allFotografo() {
+        RestUtil.get("/fotografo-all", "",
+            (data) => {
+                const tableBody = document.getElementById("dbg-tbl-all");
+                tableBody.innerHTML = ""; // Clear existing rows
+
+                data.forEach(entity => {
+                    const row = document.createElement("tr");
+
+                    row.innerHTML = `
+                        <td>${entity.id}</td>
+<td>${entity.nome}</td>
+<td>${entity.cognome}</td>
+<td>${entity.luogoNascita}</td>
+<td>${entity.provincia}</td>
+<td>${entity.dataNascita}</td>
+<td>${entity.nazionalita}</td>
+<td>${entity.cartaIdentita}</td>
+<td>${entity.codiceFiscale}</td>
+<td>${entity.email}</td>
+<td>${entity.residenza}</td>
+<td>${entity.cap}</td>
+<td>${entity.numeroCivico}</td>
+<td>${entity.telefonoCellulare}</td>
+<td>${entity.telefonoFisso}</td>
+<td>${entity.stato}</td>
+<td>${entity.dataAggiornamento}</td>
+<td>${entity.macchinafotografic}</td>
+
+                    `;
+
+                    tableBody.appendChild(row);
+                });
+            },
+            () => {}
+        );
+    }
+
+	</script>
+</head>
+<body>
+	<div id='0'>
+		<div id='1'>
+			/fotografo-all
+			<button id='2' onclick='allFotografo()'>
+				ESEGUI
+			</button>
+		</div>
+		<table id='3'>
+			<thead id='4'>
+				<tr>
+					<th>
+						ID
+					</th>
+					<th>
+						NOME
+					</th>
+					<th>
+						COGNOME
+					</th>
+					<th>
+						LUOGONASCITA
+					</th>
+					<th>
+						PROVINCIA
+					</th>
+					<th>
+						DATANASCITA
+					</th>
+					<th>
+						NAZIONALITA
+					</th>
+					<th>
+						CARTAIDENTITA
+					</th>
+					<th>
+						CODICEFISCALE
+					</th>
+					<th>
+						EMAIL
+					</th>
+					<th>
+						RESIDENZA
+					</th>
+					<th>
+						CAP
+					</th>
+					<th>
+						NUMEROCIVICO
+					</th>
+					<th>
+						TELEFONOCELLULARE
+					</th>
+					<th>
+						TELEFONOFISSO
+					</th>
+					<th>
+						STATO
+					</th>
+					<th>
+						DATAAGGIORNAMENTO
+					</th>
+					<th>
+						MACCHINAFOTOGRAFIC
+					</th>
+				</tr>
+			</thead>
+			<tbody id='dbg-tbl-all'>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

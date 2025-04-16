@@ -1,0 +1,22 @@
+.login{
+    height: 260px;
+    background-color:  rgba(9, 179, 247, 0.219);
+    padding-top: 20px;
+    border: 10px solid rgba(0, 0, 255, 0.349);
+    border-top: 20px solid rgba(0, 26, 255, 0.842);
+    box-shadow: 10px 10px;
+}
+.main{
+    background-color: aliceblue;
+    height: 80vh;
+    /* display: flex;               
+    justify-content: center;     
+    align-items: center; */
+
+}
+button{
+    width: 100%;
+}
+input{
+    width: 100%;
+}
