@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	</link>
+	<link rel="stylesheet" href="./CSS/profilo.css">
+	</link>
+	<link rel="stylesheet" href="./CSS/footer.css">
+	</link>
+	<link rel="stylesheet" href="./CSS/navUser.css">
+	</link>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	</link>
+	<title>
+		JOBSMATCHER
+	</title>
+</head>
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+	</script>
+	<nav id="149" class="bg-body-tertiary">
+		<div id="150" class="row align-items-center container-fluid text-center">
+			<div id="151" class="col-3">
+				<a id="152" class="navbar-brand" href="#">
+					<img id="153" src="" alt=""/>
+				</a>
+			</div>
+			<div id="154" class="col-6">
+				<form id="155" role="search">
+					<div id="156" class="d-flex" style="padding-top: 15px;">
+						<input id="157" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+						<button id="158" class="btn btn-outline-success" type="submit">
+							Search
+						</button>
+					</div>
+				</form>
+			</div>
+			<div id="159" class="offset-1 col-2 text-start">
+				<a id="160" class="showInfo" onclick="show('userInfo')">
+					User
+				</a>
+				<div id="userInfo" class="userInfo col-2 text-start">
+					<ul id="162">
+						<li id="163">
+							<a id="164" href="">
+								Profilo
+							</a>
+						</li>
+						<li id="165">
+							<a id="166" href="">
+								Preferiti
+							</a>
+						</li>
+						<li id="167">
+							<a id="168" href="">
+								Logout
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div id="169" class="main container-fluid  ps-5 pe-5">
+		<div id="170" class="row">
+			<div id="171" class="profilo col-sm-6 col-12 w-100">
+				<div id="172" class="modif" onclick="show('modModal')">
+					<span id="173">
+						Modifica
+					</span>
+				</div>
+				<div id="174" class="row text-start ps-2 d-flex">
+					<div id="175" class="img col-6">
+						<div id="176" class="pe-4 text-center">
+							<i id="177" class="bi bi-person-square" style="font-size:150px">
+							</i>
+						</div>
+					</div>
+					<div id="178" class="datiPersonali col-6 pt-4">
+						<div id="179" class="card">
+							<div id="180" class="card-body">
+								<div id="181">
+									<h5 id="userName" class="userName">
+										anonymous
+									</h5>
+								</div>
+								<div id="183">
+									<p id="nascita" class="nascita">
+										00/00/0000
+									</p>
+								</div>
+								<div id="185">
+									<p id="local" class="local">
+										ita
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="187" class="row p-2">
+				</div>
+				<div id="188" class="row p-2">
+					<div id="189" class="specifiche card col-12">
+						<h5 id="190" class="card-header">
+							SPECIFICHE
+						</h5>
+						<div id="191" class="card-body">
+							<div id="192">
+								<h6 id="193" class="residenza-title">
+									residenza:
+								</h6>
+								<p id="194" class="residenza-text">
+								</p>
+								<h6 id="195" class="domicilio-title">
+									domicilio:
+								</h6>
+								<p id="196" class="domicilio-text">
+								</p>
+								<h6 id="197" class="eta-title">
+									eta:
+								</h6>
+								<p id="198" class="eta-text">
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="199" class="cards">
+			<div id="200" class="card-body row row-cols-1 row-cols-md-3 g4 ">
+				<div id="CONTATTI" class="col">
+					<div id="211">
+						<div id="212" class="card">
+							<h5 id="213" class="card-header">
+								CONTATTI
+							</h5>
+							<div id="214" class="card-body">
+								<div id="201">
+									<h6 id="202" class="email-title">
+										email:
+									</h6>
+									<p id="203" class="email-text">
+									</p>
+									<h6 id="204" class="pec-title">
+										pec:
+									</h6>
+									<p id="205" class="pec-text">
+									</p>
+									<h6 id="206" class="cellulare-title">
+										cellulare:
+									</h6>
+									<p id="207" class="cellulare-text">
+									</p>
+									<h6 id="208" class="tel.fisso-title">
+										tel.fisso:
+									</h6>
+									<p id="209" class="tel.fisso-text">
+									</p>
+								</div>
+								<div id="215" class="modif text-end pt-4" onclick="delet('CONTATTI')">
+									<span id="216">
+										elimina
+									</span>
+								</div>
+								<div id="217" class="modif text-end pt-4">
+									<span id="218">
+										&nbsp|&nbsp 
+									</span>
+								</div>
+								<div id="219" class="modif text-end pt-4" onclick="show('contattiModal')">
+									<span id="220">
+										modifica
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="COMPETENZE" class="col">
+					<div id="231">
+						<div id="232" class="card">
+							<h5 id="233" class="card-header">
+								COMPETENZE
+							</h5>
+							<div id="234" class="card-body">
+								<div id="221">
+									<h6 id="222" class="lingua-title">
+										lingua:
+									</h6>
+									<p id="223" class="lingua-text">
+									</p>
+									<h6 id="224" class="certificato-title">
+										certificato:
+									</h6>
+									<p id="225" class="certificato-text">
+									</p>
+									<h6 id="226" class="celpatente-title">
+										celpatente:
+									</h6>
+									<p id="227" class="celpatente-text">
+									</p>
+									<h6 id="228" class="disponibile-title">
+										disponibile:
+									</h6>
+									<p id="229" class="disponibile-text">
+									</p>
+								</div>
+								<div id="235" class="modif text-end pt-4" onclick="delet('COMPETENZE')">
+									<span id="236">
+										elimina
+									</span>
+								</div>
+								<div id="237" class="modif text-end pt-4">
+									<span id="238">
+										&nbsp|&nbsp 
+									</span>
+								</div>
+								<div id="239" class="modif text-end pt-4" onclick="show('competenzeModal')">
+									<span id="240">
+										modifica
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="241" class="modif text-end pt-4" onclick="show('compModal')">
+				<span id="242">
+					aggiungi
+				</span>
+			</div>
+		</div>
+		<div id="modModal" class="modModal align-items-center" onclick="show('modModal')">
+			<div id="244" class="modalCon offset-3 col-6 p-3" onclick="event.stopPropagation()">
+				<div id="245" class="d-flex flex-row-reverse">
+					<i id="246" class="bi bi-x-lg" onclick="show('modModal')">
+					</i>
+				</div>
+				<form id="247" action="/profile/modif" method="POST">
+					<div id="248" class="input-group mb-1">
+						<span id="username" class="input-group-text">
+							username
+						</span>
+						<input id="250" class="form-control" type="text" placeholder="username" aria-label="username"/>
+					</div>
+					<div id="251" class="input-group mb-1">
+						<span id="nascita" class="input-group-text">
+							nascita
+						</span>
+						<input id="253" class="form-control" type="date" placeholder="nascita" aria-label="nascita"/>
+					</div>
+					<div id="254" class="input-group mb-1">
+						<span id="locale" class="input-group-text">
+							locale
+						</span>
+						<input id="256" class="form-control" type="text" placeholder="locale" aria-label="locale"/>
+					</div>
+					<div id="257">
+						<div id="258" class="input-group mb-1">
+							<span id="259" class="input-group-text">
+								residenza
+							</span>
+							<input id="residenza" class="form-control" type="text" placeholder="residenza" aria-label="residenza"/>
+						</div>
+						<div id="261" class="input-group mb-1">
+							<span id="262" class="input-group-text">
+								domicilio
+							</span>
+							<input id="domicilio" class="form-control" type="text" placeholder="domicilio" aria-label="domicilio"/>
+						</div>
+						<div id="264" class="input-group mb-1">
+							<span id="265" class="input-group-text">
+								eta
+							</span>
+							<input id="eta" class="form-control" type="number" step="1" placeholder="eta" aria-label="eta"/>
+						</div>
+					</div>
+					<div id="267" class="text-end">
+						<button id="268" class="text-end" type="submit">
+							modifica
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="compModal" class="modModal align-items-center" onclick="show('compModal')">
+			<div id="270" class="modalCon offset-3 col-6 p-3" onclick="event.stopPropagation()">
+				<div id="271" class="d-flex flex-row-reverse">
+					<i id="272" class="bi bi-x-lg" onclick="show('compModal')">
+					</i>
+				</div>
+				<div id="273">
+					<form id="274" action="/profile/add" method="POST">
+						<div id="275" class="input-group mb-1">
+							<span id="276" class="input-group-text">
+								titolo
+							</span>
+							<input id="title" class="form-control" type="text"/>
+						</div>
+						<div id="addArea" class="addArea">
+						</div>
+						<div id="279" class="text-end">
+							<button id="280" class="text-end" type="submit">
+								submit
+							</button>
+						</div>
+					</form>
+					<div id="281" class="input-group mb-1">
+						<span id="282" class="input-group-text">
+							nome del valore
+						</span>
+						<input id="valueName" class="form-control" type="text"/>
+					</div>
+					<div id="284" class="input-group mb-1">
+						<span id="285" class="input-group-text">
+							tipo del valore
+						</span>
+						<select id="valueType" class="form-select" name="valueType">
+							<option id="287" value="">
+							</option>
+							<option id="288" value="string">
+								text
+							</option>
+							<option id="289" value="integer">
+								numero intero
+							</option>
+							<option id="290" value="boolean">
+								doppia scelta
+							</option>
+							<option id="291" value="date">
+								data
+							</option>
+						</select>
+					</div>
+					<div id="292" class="text-end">
+						<button id="293" type="button" onclick="addArea()">
+							aggiungi
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="294">
+			<div id="contattiModal" class="modModal align-items-center" onclick="show('contattiModal')">
+				<div id="310" class="modalCon offset-3 col-6 p-3" onclick="event.stopPropagation()">
+					<div id="311" class="d-flex flex-row-reverse">
+						<i id="312" class="bi bi-x-lg" onclick="show('contattiModal')">
+						</i>
+					</div>
+					<div id="313">
+						<form id="314" action="/profile/modifica" method="POST">
+							<div id="315" class="text-end">
+								<input id="316" class="d-none" name="mapKey" value="CONTATTI"/>
+								<div id="295">
+									<div id="296">
+										<div id="297" class="input-group mb-1">
+											<span id="298" class="input-group-text">
+												email
+											</span>
+											<input id="email" class="form-control" type="text" placeholder="email" aria-label="email"/>
+										</div>
+										<div id="300" class="input-group mb-1">
+											<span id="301" class="input-group-text">
+												pec
+											</span>
+											<input id="pec" class="form-control" type="text" placeholder="pec" aria-label="pec"/>
+										</div>
+										<div id="303" class="input-group mb-1">
+											<span id="304" class="input-group-text">
+												cellulare
+											</span>
+											<input id="cellulare" class="form-control" type="text" placeholder="cellulare" aria-label="cellulare"/>
+										</div>
+										<div id="306" class="input-group mb-1">
+											<span id="307" class="input-group-text">
+												tel.fisso
+											</span>
+											<input id="tel.fisso" class="form-control" type="text" placeholder="tel.fisso" aria-label="tel.fisso"/>
+										</div>
+									</div>
+								</div>
+								<button id="317" class="text-end" type="submit">
+									modifica
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="competenzeModal" class="modModal align-items-center" onclick="show('competenzeModal')">
+				<div id="333" class="modalCon offset-3 col-6 p-3" onclick="event.stopPropagation()">
+					<div id="334" class="d-flex flex-row-reverse">
+						<i id="335" class="bi bi-x-lg" onclick="show('competenzeModal')">
+						</i>
+					</div>
+					<div id="336">
+						<form id="337" action="/profile/modifica" method="POST">
+							<div id="338" class="text-end">
+								<input id="339" class="d-none" name="mapKey" value="COMPETENZE"/>
+								<div id="318">
+									<div id="319">
+										<div id="320" class="input-group mb-1">
+											<span id="321" class="input-group-text">
+												lingua
+											</span>
+											<input id="lingua" class="form-control" type="text" placeholder="lingua" aria-label="lingua"/>
+										</div>
+										<div id="323" class="input-group mb-1">
+											<span id="324" class="input-group-text">
+												certificato
+											</span>
+											<input id="certificato" class="form-control" type="text" placeholder="certificato" aria-label="certificato"/>
+										</div>
+										<div id="326" class="input-group mb-1">
+											<span id="327" class="input-group-text">
+												celpatente
+											</span>
+											<input id="celpatente" class="form-control" type="text" placeholder="celpatente" aria-label="celpatente"/>
+										</div>
+										<div id="329" class="form-check">
+											<input id="disponibile" class="form-check-input" type="checkbox" value="false"/>
+											<label id="331" class="form-check-label" for="disponibile">
+												disponibile
+											</label>
+										</div>
+									</div>
+								</div>
+								<button id="340" class="text-end" type="submit">
+									modifica
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="341" class="footer col-12">
+		<div id="342" class="row container-fluid text-center" style="font-size: small; width: 100%;">
+			<div id="343" class="col-4">
+				<a id="344" href="">
+					Informazioni
+				</a>
+				<a id="345" href="">
+					Sito
+					<br/>
+				</a>
+				<a id="346" href="">
+					Informativa sulla privacy
+				</a>
+			</div>
+			<div id="347" class="col-4">
+				<a id="348" href="">
+				</a>
+			</div>
+			<div id="349" class="col-4">
+			</div>
+		</div>
+		<div id="350" class="row container-fluid text-center">
+			<a id="351">
+				@2025 Azienda.com
+			</a>
+		</div>
+	</div>
+	<script src="./js/show.js">
+	</script>
+	<script src="./js/profile.js">
+	</script>
+</body>
+</html>

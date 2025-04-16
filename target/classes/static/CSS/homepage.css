@@ -1,0 +1,25 @@
+.main{
+    background-color: aliceblue;
+    min-height: 80vh;
+    padding: 10px;
+    
+}
+.center{
+    /* width: 50%; */
+    min-height: 89vh;
+    /* margin-left: 25%; */
+    background-color: rgba(9, 179, 247, 0.219);
+    padding: 10px;
+    padding-top: 70px;
+    box-shadow: 10px 10px rgb(19, 38, 165);
+}
+
+#notice li{
+    background-color: rgb(252, 253, 253);
+    margin-top: 10px;
+    display: flex; 
+    align-items: center;
+    border:1px,solid #000;
+    height: 40px;
+    padding-left: 10px;
+}

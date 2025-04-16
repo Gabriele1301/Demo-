@@ -1,0 +1,8 @@
+.focus:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.noUnderline{
+    text-decoration: none;
+}
