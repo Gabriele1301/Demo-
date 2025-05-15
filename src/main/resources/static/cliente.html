@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOBSMATCHER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	
+</head>
+<body>
+    <div class="main min-vh-100 d-flex flex-column">
+        <nav id="149" class="bg-body-tertiary navbar">
+            <div id="150" class="row align-items-center container-fluid text-center">
+                <div id="159" class="ms-4d5 col-12 d-flex align-items-center  text-start">
+                    <a id="160" class="showInfo" onclick="show('userInfo')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"></path>
+                        </svg>
+                        <!-- TODO: Icona o qualcosa di più visibile -->
+                    </a>
+                    <span class="d-flex align-items-center col-12">
+                        <a href="/homePage" class="ms-3 fs-3 " style="text-decoration: none;">JOBSMATCHER</a>
+                        <a href="/offer" class="ms-3 fs-5 d-none d-sm-block" style="text-decoration: none;">Offerte</a>
+                    </span>
+                    
+                </div>
+                <div class="row">
+                    <div id="userInfo" class="userInfo ms-4d5 col-2 text-start" style="display: none;">
+                        <ul id="162">
+                            <li id="163">
+                                <a id="164" href="">
+                                    Profilo
+                                </a>
+                            </li>
+                            <li id="165">
+                                <a id="166" href="">
+                                    Preferiti
+                                </a>
+                            </li>
+                            <li id="167">
+                                <a id="168" href="/logout">
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+    
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="cont d-flex flex-fill justify-content-center">
+            <div class="card col-12 col-md-6 m-md-3" >
+                <div class="card-body">
+                    <div class="img" style="height: 100px;">
+                        <img src="" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <h4>title</h4>
+                    </div>
+                    <div class="star d-flex align-items-center" style="height: 36px;">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="black"  class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <defs>
+                                <linearGradient id="star0" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop class="startStar" offset="0%" stop-color="white" />
+                                    <stop class="endStar" offset="0%" stop-color="white" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="black" fill="white" class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <defs>
+                                <linearGradient id="star1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop class="startStar" offset="0%" stop-color="white" />
+                                    <stop class="endStar" offset="0%" stop-color="white" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="black" fill="white" class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <defs>
+                                <linearGradient id="star2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop class="startStar" offset="0%" stop-color="white" />
+                                    <stop class="endStar" offset="0%" stop-color="white" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="black" fill="white" class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <defs>
+                                <linearGradient id="star3" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop class="startStar" offset="0%" stop-color="white" />
+                                    <stop class="endStar" offset="0%" stop-color="white" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="black" fill="white" class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <defs>
+                                <linearGradient id="star4" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop class="startStar" offset="0%" stop-color="white" />
+                                    <stop class="endStar" offset="0%" stop-color="white" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+
+                            <div id="valutazione" class="ms-1"></div>
+                        
+    
+                    </div>
+
+                    <div>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Descrizione</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+                        </li>
+                        </ul>
+
+                        <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                            <div class="p-3">
+                                <div class="row">
+                                    <p>sadasfdajdshksajdsalkjsakdklsajfjdhfdywhuivwnv</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer id="73" class="footer bg-light container-fluid ">
+            <div id="74" class="container text-center" style="font-size: small;">
+                <div id="75" class="row">
+                    <div id="139" class="col-md-4 mb-2">
+                        <a id="76" class="text-decoration-none text-dark me-3" href="#">
+                            Informazioni
+                        </a>
+                        <a id="77" class="text-decoration-none text-dark me-3" href="#">
+                            Sito
+                        </a>
+                        <a id="78" class="text-decoration-none text-dark" href="#">
+                            Informativa sulla privacy
+                        </a>
+                    </div>
+                    <div id="143" class="col-md-4 mb-2">
+                        <p id="144" class="mb-0">
+                            &copy; 2023 JOBSMATCHER. Tutti i diritti riservati.
+                        </p>
+                    </div>
+                    <div id="145" class="col-md-4">
+                        <a id="146" class="text-decoration-none text-dark me-2" href="#">
+                            <i class='bi bi-facebook'></i>
+                        </a>
+                        <a id="147" class="text-decoration-none text-dark me-2" href="#">
+                            <i class='bi bi-twitter'></i>
+                        </a>
+                        <a id="148" class="text-decoration-none text-dark" href="#">
+                            <i class='bi bi-linkedin'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+    <script>
+        var vot=3.6
+        var starts =document.querySelectorAll(".star svg")
+        for (let index = 0; index < Math.floor(vot) ; index++) {
+            starts[index].setAttribute("fill","yellow")
+        }
+        if (vot-Math.floor(vot)>0) {
+            let lastStar=starts[Math.trunc(vot)]
+            let perc=(vot-Math.trunc(vot))*100
+            console.log(perc)
+            console.log(lastStar)
+            lastStar.querySelector(".startStar").setAttribute("stop-color","yellow")
+            lastStar.querySelector(".startStar").setAttribute("offset",perc+"%")
+            lastStar.querySelector(".endStar").setAttribute("offset",perc+"%")
+            lastStar.setAttribute("fill","url(#star"+Array.from(starts).indexOf(lastStar)+")")
+        }
+        document.getElementById("valutazione").textContent=vot
+        </script>
+</body>
+</html>

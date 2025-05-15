@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	</link>
+	<link rel="stylesheet" href="./css/profilo.css">
+	</link>
+	<link rel="stylesheet" href="./css/footer.css">
+	</link>
+	<link rel="stylesheet" href="./css/navUser.css">
+	</link>
+	<link rel="stylesheet" href="./css/components.css">
+	</link>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	</link>
+	<style id="467">
+		.ms-4d5 { margin-left: 1.75rem; } .col-md-6 .card { height: 346px; display: flex; flex-direction: column; } .col-md-6 .card .card-header { flex-shrink: 0; } .col-md-6 .card .card-body { flex-grow: 1; overflow-y: auto; } .btn-primary { background-color: #0127ff; border: none; }.modal-content {display: flex;flex-direction: column;max-height: 90vh; /* Altezza massima relativa alla viewport */}.modal-header, .modal-footer {flex-shrink: 0; /* Impedisce a header e footer di ridursi */}.modal-body {flex: 1;overflow-y: auto; /* Aggiunge la barra di scorrimento solo quando necessario */max-height: calc(90vh - 120px); /* Altezza massima meno spazio per header e footer */padding: 15px;}
+	</style>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+	</script>
+	<script src="./js/RestUtil.js">
+	</script>
+	<script src="./js/show.js">
+	</script>
+	<script src="./js/profiloProfessionista.js" defer>
+	</script>
+	<script src="./js/components.js">
+	</script>
+	<title>
+		JOBSMATCHER
+	</title>
+</head>
+<body>
+	<nav id="468" class="bg-body-tertiary navbar">
+		<div id="469" class="row align-items-center container-fluid text-center">
+			<div id="470" class="ms-4d5 col-2 text-start">
+				<a id="471" class="showInfo" onclick="show('userInfo')">
+					<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='currentColor' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5'/></svg>
+				</a>
+				<div id="userInfo" class="userInfo col-2 text-start">
+					<ul id="473" class="list-unstyled p-2 bg-light rounded shadow-sm">
+						<li id="474" class="mb-2">
+							<a id="475" class="text-decoration-none text-dark d-block py-1 px-2 rounded hover-bg-primary" href="">
+								Profilo
+							</a>
+						</li>
+						<li id="476" class="mb-2">
+							<a id="477" class="text-decoration-none text-dark d-block py-1 px-2 rounded hover-bg-primary" href="">
+								Preferiti
+							</a>
+						</li>
+						<li id="478" class="mb-2">
+							<a id="479" class="text-decoration-none text-dark d-block py-1 px-2 rounded hover-bg-primary" href="/logout">
+								<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='black' class='bi bi-box-arrow-in-left' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z'/><path fill-rule='evenodd' d='M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708z'/></svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div id="480" class="main container-fluid ps-5 pe-5">
+		<div id="481" class="row">
+			<div id="482" class="col-md-3">
+				<div id="483" class="img position-relative d-flex justify-content-center">
+					<button id="edit-profile-img" class="btn btn-primary btn-sm position-absolute top-0 end-0 mt-2 me-3" style="width: 30px;" title="Modifica foto" onclick="chooseImage()"><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-pencil-square' viewBox='0 0 18 18'><path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z'/><path fill-rule='evenodd' d='M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z'/></svg></button>
+					<div id="484" class="profile-image-container">
+						<img id="profile-image" src="" alt="Foto profilo" class="profile-image"/>
+					</div>
+				</div>
+				<div id="431" class="card mt-3">
+					<div id="432" class="card-header d-flex justify-content-between">
+						<h5 id="433" class="m-0">
+							Anagrafica
+						</h5>
+						<button id="434" class="btn btn-primary btn-sm" style="width: 30px;" title="Modifica" onclick="openDynamicModal('anagrafica', professionista)">
+							<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-pencil-square' viewBox='0 0 18 18'><path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z'/><path fill-rule='evenodd' d='M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z'/></svg>
+						</button>
+					</div>
+					<div id="205" class="card-body" style="line-height: 1.85;">
+						<span id="206" style="font-weight: bold;">
+							Nome: 
+						</span>
+						<span id="nome">
+						</span>
+						<br/>
+						<span id="208" style="font-weight: bold;">
+							Cognome: 
+						</span>
+						<span id="cognome">
+						</span>
+						<br/>
+						<span id="210" style="font-weight: bold;">
+							Comune di Nascita: 
+						</span>
+						<span id="comunenascita">
+						</span>
+						<br/>
+						<span id="212" style="font-weight: bold;">
+							Provincia di Nascita: 
+						</span>
+						<span id="provincianascita">
+						</span>
+						<br/>
+						<span id="214" style="font-weight: bold;">
+							Stato di Nascita: 
+						</span>
+						<span id="statonascita">
+						</span>
+						<br/>
+						<span id="216" style="font-weight: bold;">
+							Data di Nascita: 
+						</span>
+						<span id="datanascita">
+						</span>
+						<br/>
+						<span id="218" style="font-weight: bold;">
+							Nazionalità: 
+						</span>
+						<span id="nazionalita">
+						</span>
+						<br/>
+						<span id="220" style="font-weight: bold;">
+							Carta d'identità: 
+						</span>
+						<span id="cartaidentita">
+						</span>
+						<br/>
+						<span id="222" style="font-weight: bold;">
+							Codice Fiscale: 
+						</span>
+						<span id="codicefiscale">
+						</span>
+						<br/>
+						<span id="224" style="font-weight: bold;">
+							P.IVA: 
+						</span>
+						<span id="partitaiva">
+						</span>
+						<br/>
+					</div>
+				</div>
+				<div id="427" class="card mt-3">
+					<div id="428" class="card-header d-flex justify-content-between">
+						<h5 id="429" class="m-0">
+							Residenza
+						</h5>
+						<button id="430" class="btn btn-primary btn-sm" style="width: 30px;" title="Modifica" onclick="openDynamicModal('residenza', professionista)">
+							<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-pencil-square' viewBox='0 0 18 18'><path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z'/><path fill-rule='evenodd' d='M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z'/></svg>
+						</button>
+					</div>
+					<div id="231" class="card-body" style="line-height: 1.85;">
+						<span id="232" style="font-weight: bold;">
+							Indirizzo di Residenza: 
+						</span>
+						<span id="indirizzoresidenza">
+						</span>
+						<br/>
+						<span id="234" style="font-weight: bold;">
+							Comune di Residenza: 
+						</span>
+						<span id="comuneresidenza">
+						</span>
+						<br/>
+						<span id="236" style="font-weight: bold;">
+							CAP: 
+						</span>
+						<span id="cap">
+						</span>
+						<br/>
+						<span id="238" style="font-weight: bold;">
+							Provincia di Residenza: 
+						</span>
+						<span id="provinciaresidenza">
+						</span>
+						<br/>
+						<span id="240" style="font-weight: bold;">
+							Stato di Residenza: 
+						</span>
+						<span id="statoresidenza">
+						</span>
+						<br/>
+					</div>
+				</div>
+				<div id="435" class="card mt-3">
+					<div id="436" class="card-header d-flex justify-content-between">
+						<h5 id="437" class="m-0">
+							Contatti
+						</h5>
+						<button id="438" class="btn btn-primary btn-sm" style="width: 30px;" title="Modifica" onclick="openDynamicModal('contatti', professionista)">
+							<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-pencil-square' viewBox='0 0 18 18'><path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z'/><path fill-rule='evenodd' d='M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z'/></svg>
+						</button>
+					</div>
+					<div id="226" class="card-body" style="line-height: 1.85;">
+						<span id="227" style="font-weight: bold;">
+							Email: 
+						</span>
+						<span id="email">
+						</span>
+						<br/>
+						<span id="229" style="font-weight: bold;">
+							PEC: 
+						</span>
+						<span id="pec">
+						</span>
+						<br/>
+						<span id="242" style="font-weight: bold;">
+							Telefono Cellulare: 
+						</span>
+						<span id="telefonocellulare">
+						</span>
+						<br/>
+						<span id="244" style="font-weight: bold;">
+							Telefono Fisso: 
+						</span>
+						<span id="telefonofisso">
+						</span>
+						<br/>
+					</div>
+				</div>
+			</div>
+			<div id="486" class="col-md-9">
+				<div id="464" class="row">
+					<div id="439" class="col-md-6">
+						<div id="esperienze" class="card mt-3">
+							<div id="441" class="card-header d-flex justify-content-between">
+								<h5 id="442" class="m-0">
+									Esperienze
+								</h5>
+								<button id="443" class="btn btn-primary btn-sm" style="width: 30px;" title="Aggiungi">
+									<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='currentColor' class='bi bi-plus-lg' viewBox='0 -2 24 20'><path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2'/></svg>
+								</button>
+							</div>
+							<div id="card-body-esperienza" class="card-body">
+							</div>
+						</div>
+					</div>
+					<div id="444" class="col-md-6">
+						<div id="disponibilità" class="card mt-3">
+							<div id="446" class="card-header d-flex justify-content-between">
+								<h5 id="447" class="m-0">
+									Disponibilità
+								</h5>
+								<button id="448" class="btn btn-primary btn-sm" style="width: 30px;" title="Aggiungi">
+									<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='currentColor' class='bi bi-plus-lg' viewBox='0 -2 24 20'><path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2'/></svg>
+								</button>
+							</div>
+							<div id="card-body-disponibilita" class="card-body">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="465" class="row">
+					<div id="449" class="col-md-6">
+						<div id="segnalazioni" class="card mt-3">
+							<div id="451" class="card-header d-flex justify-content-between">
+								<h5 id="452" class="m-0">
+									Segnalazioni
+								</h5>
+								<button id="453" class="btn btn-primary btn-sm" style="width: 30px;" title="Aggiungi">
+									<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='currentColor' class='bi bi-plus-lg' viewBox='0 -2 24 20'><path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2'/></svg>
+								</button>
+							</div>
+							<div id="card-body-segnalazione" class="card-body">
+							</div>
+						</div>
+					</div>
+					<div id="454" class="col-md-6">
+						<div id="lavoriattuali" class="card mt-3">
+							<div id="456" class="card-header d-flex justify-content-between">
+								<h5 id="457" class="m-0">
+									Lavori attuali
+								</h5>
+								<button id="458" class="btn btn-primary btn-sm" style="width: 30px;" title="Aggiungi">
+									<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='currentColor' class='bi bi-plus-lg' viewBox='0 -2 24 20'><path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2'/></svg>
+								</button>
+							</div>
+							<div id="card-body-lavoroattuale" class="card-body">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="466" class="row">
+					<div id="459" class="col-md-6">
+						<div id="qualifiche" class="card mt-3">
+							<div id="461" class="card-header d-flex justify-content-between">
+								<h5 id="462" class="m-0">
+									Qualifiche
+								</h5>
+								<button id="463" class="btn btn-primary btn-sm" style="width: 30px;" title="Aggiungi">
+									<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='currentColor' class='bi bi-plus-lg' viewBox='0 -2 24 20'><path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2'/></svg>
+								</button>
+							</div>
+							<div id="card-body-qualifica" class="card-body">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="dynamicModal" class="modal fade" tabindex="-1" aria-labelledby="dynamicModalLabel" aria-hidden="true">
+		<div id="488" class="modal-dialog">
+			<div id="489" class="modal-content">
+				<div id="490" class="modal-header">
+					<h5 id="dynamicModalLabel" class="modal-title">
+						Aggiungi
+					</h5>
+					<button id="492" class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+					</button>
+				</div>
+				<div id="493" class="modal-body">
+					<div id="dynamicForm">
+						<!-- Il contenuto del form viene generato dinamicamente in JavaScript -->
+					</div>
+				</div>
+				<div id="dynamic-modal-footer" class="modal-footer">
+					<button id="496" class="btn btn-secondary" type="button" data-bs-dismiss="modal">
+						Annulla
+					</button>
+					<span id="dynamic-modal-save-btn">
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

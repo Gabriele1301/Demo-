@@ -1,7 +1,5 @@
 package generated.com.example;
 
-import it.ant.jobsmatcher.preprocessors.annotations.Professionista;
-
 
 import it.ant.jobsmatcher.entities.Persona;
 import jakarta.persistence.Entity;

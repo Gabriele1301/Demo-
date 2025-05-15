@@ -6,3 +6,10 @@
 .noUnderline{
     text-decoration: none;
 }
+a :focus{
+    cursor: pointer;
+}
+
+.pointer{
+    cursor: pointer;
+}

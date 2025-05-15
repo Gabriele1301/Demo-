@@ -17,6 +17,7 @@
 .modif span:hover{
     cursor: pointer;
     color: red;
+    
 }
 .modModal{
     display: none;

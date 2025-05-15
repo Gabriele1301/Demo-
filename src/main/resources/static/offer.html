@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOBSMATCHER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	</link>
+    <link rel="stylesheet" href="./CSS/effetti.css">
+    <link rel="stylesheet" href="./css/navUser.css">
+
+</head>
+<body>
+    
+    <div class="main min-vh-100 d-flex flex-column" >
+        <nav id="149" class="bg-body-tertiary navbar">
+            <div id="150" class="row align-items-center container-fluid text-center">
+                <div id="159" class="ms-4d5 col-12 d-flex align-items-center  text-start">
+                    <a id="160" class="showInfo" onclick="show('userInfo')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"></path>
+                        </svg>
+                        <!-- TODO: Icona o qualcosa di più visibile -->
+                    </a>
+                    <span class="d-flex align-items-center col-12">
+                        <a href="/homePage" class="ms-3 fs-3 " style="text-decoration: none;">JOBSMATCHER</a>
+                        <a href="/offer" class="ms-3 fs-5 d-none d-sm-block" style="text-decoration: none;">Offerte</a>
+                    </span>
+                    
+                </div>
+                <div class="row">
+                    <div id="userInfo" class="userInfo ms-4d5 col-2 text-start" style="display: none;">
+                        <ul id="162">
+                            <li id="163">
+                                <a id="164" href="">
+                                    Profilo
+                                </a>
+                            </li>
+                            <li id="165">
+                                <a id="166" href="">
+                                    Preferiti
+                                </a>
+                            </li>
+                            <li id="167">
+                                <a id="168" href="/logout">
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                </div>
+            </div>
+        </nav>
+
+        <div class=" d-sm-flex flex-fill mt-4 mb-4">
+            <div class="col-12 d-sm-none">
+                <a class="btn btn-light w-100" data-bs-toggle="collapse" href="#filtro" role="button" aria-expanded="false" aria-controls="filtro">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                        <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+                      </svg>
+                </a>
+      
+            </div>
+            <div class="left d-sm-block col-12 col-sm-4 fs-6 collapse" id="filtro">
+                <div class="card col-12 col-sm-8 float-end">
+                    
+                    <div  class="card-body">
+                        <div class="date">
+                            <h6>pubblicato:</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" value="7" type="radio" name="date" id="lastWeek">
+                                <label class="form-check-label" for="lastWeek" >
+                                  Ultima settimana
+                                </label>
+                              </div>
+                            <div class="form-check">
+                            <input class="form-check-input" value="14" type="radio" name="date" id="penulWeek" >
+                            <label class="form-check-label" for="penulWeek" >
+                                2 settimane fa
+                            </label>
+                            </div>
+                        </div>
+                        <div class="parola-chiave row">
+                            <h6>search</h6>
+                            <input class="col-12 col-lg" name="keyword" type="text" placeholder="Search">
+                            <!-- <button class="col-12 col-lg-6"type="button">search</button> -->
+                        </div>
+                        <div class="stipendio mt-1">
+                            <h6>Stipendio minimo</h6>
+                            <input id="stipendio-minimo" type="range" name="stipendioMin" class="form-range"value="0" min="0" max="10000">
+                            <input id="stipendio-minimo-value" class="col-8 col-lg-3 " type="number" step="1" max="10000" value="0">&Tab; €
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="center d-flex flex-column  col-12 col-sm-4 ms-sm-3" id="center" >
+                <div class="jobs" id="jobs">
+                </div>
+                
+                <div class="d-flex flex-fill justify-content-center align-items-end mb-5" aria-label="Page navigation">
+                    <ul class="pagination ">
+                        <li id="prev">
+                            <a class="page-link" href="#">&lt</a>
+                        </li>
+                     
+                      <li id="next">
+                        <a class="page-link" href="#">&gt</a>
+                      </li>
+    
+                    </ul>
+                </div>
+            </div>
+            <div class="right col-12 ms-sm-3 col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modal">
+                            PUBBLICA
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="73" class="footer bg-light container-fluid ">
+            <div id="74" class="container text-center" style="font-size: small;">
+                <div id="75" class="row">
+                    <div id="139" class="col-md-4 mb-2">
+                        <a id="76" class="text-decoration-none text-dark me-3" href="#">
+                            Informazioni
+                        </a>
+                        <a id="77" class="text-decoration-none text-dark me-3" href="#">
+                            Sito
+                        </a>
+                        <a id="78" class="text-decoration-none text-dark" href="#">
+                            Informativa sulla privacy
+                        </a>
+                    </div>
+                    <div id="143" class="col-md-4 mb-2">
+                        <p id="144" class="mb-0">
+                            &copy; 2023 JOBSMATCHER. Tutti i diritti riservati.
+                        </p>
+                    </div>
+                    <div id="145" class="col-md-4">
+                        <a id="146" class="text-decoration-none text-dark me-2" href="#">
+                            <i class='bi bi-facebook'></i>
+                        </a>
+                        <a id="147" class="text-decoration-none text-dark me-2" href="#">
+                            <i class='bi bi-twitter'></i>
+                        </a>
+                        <a id="148" class="text-decoration-none text-dark" href="#">
+                            <i class='bi bi-linkedin'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="modal" id="modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                    <form action="/offer" method="post">
+                        <div class="row mb-1">
+                            <input type="text">
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-primary" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script src="../../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js">
+	</script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+    <script src="JS/RestUtil.js"></script>
+    <script src="JS/show.js"></script>
+    <script src="./JS/offer.js"></script>
+</body>
+</html>

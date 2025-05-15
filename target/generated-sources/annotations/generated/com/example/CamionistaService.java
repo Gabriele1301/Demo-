@@ -10,7 +10,7 @@ import it.ant.jobsmatcher.services.AbstractPersistenceService.ParametricQuery;
 
 import it.ant.jobsmatcher.services.IPersonaServiceProxy;
 
-@Service(value="professionista")
+@Service(value="camionista")
 public class CamionistaService extends AbstractPersistenceService<Camionista, Long> implements IPersonaServiceProxy<Camionista>{
 	public List<Camionista> findByParams(Map<String, String> params){
 		ParametricQuery pq = findByParameters();

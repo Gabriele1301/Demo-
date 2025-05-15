@@ -7,7 +7,6 @@ import java.util.LinkedHashMap;
 import it.ant.jobsmatcher.frontendgenerator.PageGenerator;
 import it.ant.jobsmatcher.preprocessors.annotations.JobsMatcherMain;
 
-
 @JobsMatcherMain
 public class Main {
     // public static void main(String[] args) throws IOException {
