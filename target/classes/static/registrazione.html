@@ -26,21 +26,23 @@
 	</script>
 </head>
 <body>
-	<div id="9" class="main min-vh-100 d-flex flex-column" >
-		<nav id="6" class="navbar bg-body-tertiary zindex-5">
+	
+		
+		<div id="9" class="main min-vh-100 d-flex flex-column">
+			<nav id="6" class="navbar bg-body-tertiary zindex-5">
 			<div id="7" class="container-fluid">
 				<a id="8" class="navbar-brand">
 					NavBar
 				</a>
 			</div>
-		</nav>
-		<div id="10" class="registrazione col-12 flex-fill offset-md-2 col-md-8" >
-			<h4 id="11" class="d-flex justify-content-center">
-				REGISTRAZIONE
-			</h4>
-			<div id="12" class="progress  mb-3" role="progressbar" aria-label="0" aria-valuemin="0" aria-valuemax="100">
-				<div id="13" class="progress-bar">
-				</div>
+			</nav>
+			<div id="10" class="registrazione col-12 flex-fill offset-md-2 col-md-8" >
+				<h4 id="11" class="d-flex justify-content-center">
+					REGISTRAZIONE
+				</h4>
+				<div id="12" class="progress  mb-3" role="progressbar" aria-label="0" aria-valuemin="0" aria-valuemax="100">
+					<div id="13" class="progress-bar">
+					</div>
 			</div>
 			<div id="14" class="row g-0">
 				<div id="15" class="card">
@@ -48,7 +50,7 @@
 						Anagrafica generale
 					</div>
 					<div id="17" class="card-body">
-						<div class="col-12 offset-md-3 col-md-6">
+						<div class="col-12 offset-md-2 col-md-8">
 							<div id="18" class="row d-flex  mb-3">
 								<div id="19" class="col d-flex justify-content-center">
 									<label id="20" class="image-radio" for="professionista">
@@ -116,7 +118,7 @@
 						</div>
 						<div id="64" class="row">
 							<div id="65" class="d-flex justify-content-end">
-								<button id="66" class="col-2" type="button" onclick="next()">
+								<button id="66" class="btn btn-primary col-2" type="button" onclick="next()">
 									next
 								</button>
 							</div>
@@ -130,45 +132,32 @@
 						Documenti
 					</div>
 					<div id="70" class="card-body">
-						<div class="col-12 offset-md-3 col-md-6">
-
+						<div class="col-12 offset-md-2 col-md-8">
 							<div id="71" class="row mb-3">
-								<div id="72" class="col-3 text-end">
-									<label id="73" for="cartaidentita">
-										Carta d'identit�
-									</label>
-								</div>
-								<div id="74" class="col-7">
-									<input id="cartaidentita" type="text" placeholder="Carta d'identit�" name="cartaidentita" class="form-control"/>
-								</div>
+								<label id="73" for="cartaidentita">
+									Carta d'identit�
+								</label>
+								<input id="cartaidentita" type="text" placeholder="Carta d'identit�" name="cartaidentita" class="form-control"/>	
 							</div>
 							<div id="76" class="row mb-3">
-								<div id="77" class="col-3 text-end">
-									<label id="78" for="codicefiscale">
-										Codice Fiscale
-									</label>
-								</div>
-								<div id="79" class="col-7">
-									<input id="codicefiscale" type="text" placeholder="Codice Fiscale" name="codicefiscale" class="form-control"/>
-								</div>
+								<label id="78" for="codicefiscale">
+									Codice Fiscale
+								</label>
+								<input id="codicefiscale" type="text" placeholder="Codice Fiscale" name="codicefiscale" class="form-control"/>
 							</div>
 							<div id="81" class="row mb-3">
-								<div id="82" class="col-3 text-end">
-									<label id="83" for="piva">
-										P.IVA
-									</label>
-								</div>
-								<div id="84" class="col-7">
-									<input id="piva" type="text" placeholder="P. iva" name="piva" class="form-control"/>
-								</div>
+								<label id="83" for="piva">
+									P.IVA
+								</label>
+								<input id="piva" type="text" placeholder="P. iva" name="piva" class="form-control"/>
 							</div>
 						</div>
 						<div id="86" class="row">
 							<div id="87" class=" d-flex justify-content-between">
-								<button id="88" onclick="prev()">
+								<button class="btn btn-primary col-2" id="88" onclick="prev()">
 									previous
 								</button>
-								<button id="89" onclick="next()">
+								<button class="btn btn-primary col-2" id="89" onclick="next()">
 									next
 								</button>
 							</div>
@@ -182,52 +171,38 @@
 						Contatti
 					</div>
 					<div id="93" class="card-body">
-						<div id="94" class="row mb-3">
-							<div id="95" class="col-3 text-end">
+						<div class="col-12 offset-md-2 col-md-8">
+							<div id="94" class="row mb-3">
 								<label id="96" for="telefonocellulare">
 									Telefono Cellulare
 								</label>
-							</div>
-							<div id="97" class="col-7">
 								<input id="telefonocellulare" type="text" placeholder="Telefono Cellulare" name="telefonocellulare" class="form-control"/>
 							</div>
-						</div>
-						<div id="99" class="row mb-3">
-							<div id="100" class="col-3 text-end">
+							<div id="99" class="row mb-3">
 								<label id="101" for="telefonofisso">
 									Telefono Fisso
 								</label>
+								<input id="telefonofisso" type="text" placeholder="Telefono Fisso" name="telefonofisso" class="form-control"/>							
 							</div>
-							<div id="102" class="col-7">
-								<input id="telefonofisso" type="text" placeholder="Telefono Fisso" name="telefonofisso" class="form-control"/>
-							</div>
-						</div>
-						<div id="104" class="row mb-3">
-							<div id="105" class="col-3 text-end">
+							<div id="104" class="row mb-3">
 								<label id="106" for="email">
 									Email
 								</label>
-							</div>
-							<div id="107" class="col-7">
 								<input id="email" type="email" placeholder="Email" name="email" class="form-control"/>
 							</div>
-						</div>
-						<div id="109" class="row mb-3">
-							<div id="110" class="col-3 text-end">
+							<div id="109" class="row mb-3">
 								<label id="111" for="pec">
 									PEC
 								</label>
-							</div>
-							<div id="112" class="col-7">
 								<input id="pec" type="text" placeholder="Pec" name="pec" class="form-control"/>
 							</div>
 						</div>
 						<div id="114" class="row">
 							<div id="115" class=" d-flex justify-content-between">
-								<button id="116" onclick="prev()">
+								<button class="btn btn-primary col-2"  id="116" onclick="prev()">
 									previous
 								</button>
-								<button id="117" onclick="next()">
+								<button class="btn btn-primary col-2" id="117" onclick="next()">
 									next
 								</button>
 							</div>
@@ -277,10 +252,10 @@
 								</div>
 							</div>
 							<div id="140" class=" d-flex justify-content-between">
-								<button id="141" onclick="prev()">
+								<button class="btn btn-primary col-2" id="141" onclick="prev()">
 									previous
 								</button>
-								<button id="142" onclick="next()">
+								<button class="btn btn-primary col-2" id="142" onclick="next()">
 									next
 								</button>
 							</div>
@@ -293,32 +268,26 @@
 							Password
 						</div>
 						<div id="146" class="card-body">
-							<div id="147" class="row mb-3">
-								<div id="148" class="col-3 text-end">
+							<div class="col-12 offset-md-2 col-md-8">
+								<div id="147" class="row mb-3">
 									<label id="149" for="password">
 										Password
 									</label>
-								</div>
-								<div id="150" class="col-7">
 									<input id="password" type="password" placeholder="Password" name="password" class="form-control"/>
 								</div>
-							</div>
-							<div id="152" class="row mb-3">
-								<div id="153" class="col-3 text-end">
+								<div id="152" class="row mb-3">
 									<label id="154" for="confpass">
 										Conferma Password
 									</label>
-								</div>
-								<div id="155" class="col-7">
 									<input id="confpass" type="password" placeholder="Conferma Password" name="confpass" class="form-control"/>
 								</div>
 							</div>
 							<div id="157" class="row">
 								<div id="158" class=" d-flex justify-content-between">
-									<button id="159" onclick="prev()">
+									<button class="btn btn-primary col-2" id="159" onclick="prev()">
 										previous
 									</button>
-									<button id="160" onclick="signup()">
+									<button class="btn btn-primary col-2" id="160" onclick="signup()">
 										registrati
 									</button>
 								</div>
@@ -362,5 +331,3 @@
 			</div>
 		</footer>
 	</div>
-</body>
-</html>
